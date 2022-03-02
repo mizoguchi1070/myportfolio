@@ -4,7 +4,8 @@ const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 //変数 devMode は production モードの場合は false でその他の場合は true
 const devMode = process.env.NODE_ENV !== 'production';
- 
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+
 module.exports = {
  
   //エントリポイント（デフォルトと同じなので省略可）
@@ -25,8 +26,9 @@ module.exports = {
         //拡張子 .scss、.sass、css を対象
         test: /\.(scss|sass|css)$/i, 
         // 使用するローダーの指定（後ろから順番に適用される）
-        use: [ MiniCssExtractPlugin.loader,
-          {
+        use: [ MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+      },
+          /*{
             loader: "css-loader",
             options: {
               // postcss-loader と sass-loader の場合は2を指定
@@ -46,7 +48,7 @@ module.exports = {
                     "postcss-preset-env",
                     {
                       //必要に応じてオプションを指定
-                      /* オプション */
+                      /* オプション *//*
                       browsers: "last 2 versions",
                       stage: 3,
                       features: {
@@ -78,7 +80,7 @@ module.exports = {
           //Sass ローダー
           'sass-loader',
         ], 
-      },
+      },*/
       //Asset Modules の設定
       {
         //対象とするアセットファイルの拡張子を正規表現で指定
@@ -94,6 +96,11 @@ module.exports = {
       // 抽出する CSS のファイル名
       filename: './style.css',
     }),
+    /*new BrowserSyncPlugin({
+      host: "localhost",
+      port: 8081,
+      proxy: "http://localhost: 8080"
+     }),*/
   ],
   //production モード以外の場合は source-map タイプのソースマップを指定
   devtool: devMode ? 'source-map' : 'eval',

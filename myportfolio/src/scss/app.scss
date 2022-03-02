@@ -1,12 +1,13 @@
 @charset "utf-8";
 // スタイルシート（Sass）を読み込む
 //foundation
-@import './foundation/**';
+//@import './foundation/**';
 //layout
-@import './layout/**';
+@import './layout/_header.scss';
+@import './layout/_index.scss';
 //component
-@import './object/component/**';
+//@import './object/component/**';
 //project
-@import './object/project/**';
+//@import './object/project/**';
 //utility
-@import './object/utility/**';
+//@import './object/utility/**';
