@@ -15,28 +15,18 @@
 </head>
 
 <body>
-	<header>
-		<nav class="navbar navbar-default" style="margin-bottom:0;">
-		  <div class="navbar-header">
-		    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-navbar-collapse-1">
-		      <span class="sr-only">メニュー</span>
-		      <span class="icon-bar"></span>
-		      <span class="icon-bar"></span>
-		      <span class="icon-bar"></span>
-		    </button>
-		  </div>
-		  <div id="bs-navbar-collapse-1" class="collapse navbar-collapse">
-		    <ul class="nav navbar-nav">
-		      <li><a href="#">HOME</a></li>
-		      <li><a href="#">WORKS</a></li>
-			  <li><a href="#">ABOUT</a></li>
-              <li><a href="#">SKILL</a></li>
-              <li><a href="#">SERVICE</a></li>
-		      <li><a href="#">CONTACT</a></li>
-		    </ul>
-		  </div>
-		</nav>
-		<div id="top-vg">
-			<img src="<?php echo get_template_directory_uri(); ?>/src/img/sample.jpg" alt="トップページ画像" >
-		</div>
-	</header>
+	<header id="nav">
+        <div class="wrap">
+			<span class="left-nav"><a href="#">Kazuki PORTFOLIO</a></span>
+			<nav>
+				<ul class="right-nav">
+					<li><a href="#">HOME</a></li>
+					<li><a href="#">WORKS</a></li>
+					<li><a href="#">ABOUT</a></li>
+					<li><a href="#">SKILL</a></li>
+					<li><a href="#">SERVICE</a></li>
+					<li><a href="#">CONTACT</a></li>
+				</ul>
+			</nav>
+        </div>
+    </header>

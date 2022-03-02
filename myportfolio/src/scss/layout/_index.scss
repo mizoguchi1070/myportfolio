@@ -1,0 +1,70 @@
+h2{
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+
+
+
+.main{
+    margin-top: 50px;
+}
+
+#top-vg{
+    background-image: url('./../img/whale_13_sunameri.png');
+    background: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: calc(60vh + 80px);
+    position: fixed;
+    z-index: -100;
+}
+
+.title{
+    padding: 30vh 0;
+    width: 100vw;
+    background: lightgreen;
+    h1{
+        max-width: 1500px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+.message{
+    margin: 3rem auto 10rem;
+    text-align: center;
+}
+
+article.service{
+    margin: 0 10rem;
+    
+    img{
+        width: 10em;
+    }
+
+    .service-contents{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+article.works{
+    img{
+        width: 25rem;
+    }
+    .top,
+    .bottom{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+}
+
+article.contact{
+    text-align: center;
+}

@@ -1,4 +1,114 @@
-/*!*******************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/sass/foundation/variables.scss ***!
-  \*******************************************************************************************************************************************************************************************************************************/
+/*!************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/app.scss ***!
+  \************************************************************************************************************/
+@charset "UTF-8";
+header {
+  width: 100vw;
+  height: 100px;
+  /* 高さを50pxに指定 */
+  background: #FFFFFF;
+  /* 背景色にグレーを指定 */
+  padding: 20px 50px;
+  /* ヘッダーに上下左右それぞれ余白を指定 */
+  box-sizing: border-box;
+  /* padding分を含んで幅を100%にするため */
+  position: fixed;
+  /* ウィンドウを基準に画面に固定 */
+  top: 0;
+  /* 上下の固定位置を上から0pxにする */
+  left: 0;
+  /* 左右の固定位置を左から0pxにする */
+  align-items: center;
+  /* 中の要素を上下中央に並べる */
+  z-index: 90;
+}
+header a {
+  color: white;
+}
+header ul {
+  list-style-type: none;
+  display: flex;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+header li {
+  padding-left: 2rem;
+}
+header #nav {
+  opacity: 0;
+}
+header #nav.invert {
+  opacity: 1;
+}
+header .navbar {
+  margin-bottom: 0;
+}
+header .wrap {
+  display: flex;
+  justify-content: space-between;
+}
 
+h2 {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.main {
+  margin-top: 50px;
+}
+
+#top-vg {
+  background-image: url(img/whale_13_sunameri.png);
+  background: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: calc(60vh + 80px);
+  position: fixed;
+  z-index: -100;
+}
+
+.title {
+  padding: 30vh 0;
+  width: 100vw;
+  background: lightgreen;
+}
+.title h1 {
+  max-width: 1500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.message {
+  margin: 3rem auto 10rem;
+  text-align: center;
+}
+
+article.service {
+  margin: 0 10rem;
+}
+article.service img {
+  width: 10em;
+}
+article.service .service-contents {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+article.works img {
+  width: 25rem;
+}
+article.works .top,
+article.works .bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+article.contact {
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map*/
