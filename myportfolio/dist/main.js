@@ -14,33 +14,70 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/js/fade.js":
-/*!************************!*\
-  !*** ./src/js/fade.js ***!
-  \************************/
+/***/ "./src/js/modules/fade.js":
+/*!********************************!*\
+  !*** ./src/js/modules/fade.js ***!
+  \********************************/
 /***/ (() => {
 
-
+// フェードイン
+function showElementAnimation() {
+    var element = document.getElementsByClassName('fade-in');
+    if (!element) return;
+    var showTiming = window.innerHeight > 768 ? 200 : 60;
+    var scrollY = window.pageYOffset;
+    var windowH = window.innerHeight;
+    for (var i = 0; i < element.length; i++) {
+        var elemClientRect = element[i].getBoundingClientRect(); var elemY = scrollY + elemClientRect.top; if (scrollY + windowH - showTiming > elemY) {
+            element[i].classList.add('show');
+        } else if (scrollY + windowH < elemY) {
+        }
+    }
+}
+showElementAnimation();
+window.addEventListener('scroll', showElementAnimation);
 
 /***/ }),
 
-/***/ "./src/js/scrollcolor.js":
-/*!*******************************!*\
-  !*** ./src/js/scrollcolor.js ***!
-  \*******************************/
+/***/ "./src/js/modules/hamburger.js":
+/*!*************************************!*\
+  !*** ./src/js/modules/hamburger.js ***!
+  \*************************************/
 /***/ (() => {
 
-jQuery(function(){
+/*window.addEventListener('load', function hamburger() {
+    document.getElementById('line1').classList.toggle('line_1');
+    document.getElementById('line2').classList.toggle('line_2');
+    document.getElementById('line3').classList.toggle('line_3');
+    document.getElementById('nav').classList.toggle('in');
+  })
+  document.getElementById('hamburger').addEventListener('click' , function () {
+    hamburger();
+  } );*/
 
-  var nav = jQuery('#nav');
-	jQuery(window).scroll(function () {
-		if (jQuery(this).scrollTop() > height) { //スクロールが500pxを越えたら
-			nav.addClass('invert');
-		} else { //スクロールが500pxを越えなければ
-			nav.removeClass('invert');
-		}
-	});
-});
+  jQuery(function () {
+    jQuery('.js-btn').on('click', function () {        // js-btnクラスをクリックすると、
+      jQuery('.right-nav , .btn-line').toggleClass('open'); // メニューとバーガーの線にopenクラスをつけ外しする
+    })
+  });
+
+/***/ }),
+
+/***/ "./src/js/modules/scrollcolor.js":
+/*!***************************************!*\
+  !*** ./src/js/modules/scrollcolor.js ***!
+  \***************************************/
+/***/ (() => {
+
+jQuery(document).scroll(function() {    
+	var scroll = jQuery(window).scrollTop();
+  
+	if (scroll >= 400) { //150pxスクロールすると起動
+	  jQuery('header').css('background-color', '#FFF');
+	} else { //スクロールしていないときは起動しない
+	  jQuery('header').css('background-color', 'unset');
+	}
+  });
 
 /***/ })
 
@@ -121,10 +158,13 @@ var __webpack_exports__ = {};
   \*************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scss_app_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../scss/app.scss */ "./src/scss/app.scss");
-/* harmony import */ var _fade__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./fade */ "./src/js/fade.js");
-/* harmony import */ var _fade__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fade__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _scrollcolor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scrollcolor */ "./src/js/scrollcolor.js");
-/* harmony import */ var _scrollcolor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_scrollcolor__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _modules_fade__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/fade */ "./src/js/modules/fade.js");
+/* harmony import */ var _modules_fade__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_fade__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _modules_scrollcolor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/scrollcolor */ "./src/js/modules/scrollcolor.js");
+/* harmony import */ var _modules_scrollcolor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_scrollcolor__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/hamburger */ "./src/js/modules/hamburger.js");
+/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_hamburger__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 

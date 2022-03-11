@@ -1,3 +1,4 @@
 import './../scss/app.scss';
-import './fade';
-import './scrollcolor';
+import './modules/fade';
+import './modules/scrollcolor';
+import './modules/hamburger';

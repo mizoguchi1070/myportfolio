@@ -1,10 +1,9 @@
 <footer>
 		<div class="container">
-			<p class="text-center">Kazu Portfolio</p>
+			<p class="text-center">©Kazuki Portfolio</p>
 		</div>
 	</footer>
 	
 	<?php wp_footer(); ?>
-</div><!--main-->
 </body>
 </html>
