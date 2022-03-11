@@ -1,0 +1,31 @@
+#about{
+
+    .about {
+        margin: 0 auto;
+        width: 35vw;
+        h2{
+        }
+    
+        .about-article{
+            text-align: left;
+
+            p{
+                text-align: left;
+            }
+            img{
+                width: 100%;
+            }
+
+            .about-sns-link{
+                i:hover{
+                    transform:scale(1.2,1.2);                
+                }
+                ul{
+                    width: fit-content;
+                    padding: 0;
+                    margin: 0 auto;
+                } 
+            }
+        }
+    }
+}

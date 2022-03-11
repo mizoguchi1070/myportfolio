@@ -1,53 +1,151 @@
 header {
-    width: 100%;
-    height: 100px; /* 高さを50pxに指定 */
-    background: #FFFFFF; /* 背景色にグレーを指定 */
-    padding: 20px 50px; /* ヘッダーに上下左右それぞれ余白を指定 */
+    width: 100vw;
+    height: 90px; /* 高さを50pxに指定 */
     box-sizing: border-box; /* padding分を含んで幅を100%にするため */
     position: fixed; /* ウィンドウを基準に画面に固定 */
     top: 0; /* 上下の固定位置を上から0pxにする */
     left: 0; /* 左右の固定位置を左から0pxにする */
     align-items: center; /* 中の要素を上下中央に並べる */
     z-index: 90;
-    a{
-        color: white;
+    .navigation{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1440px;
+        margin: 0 10px;
+        padding: 20px 40px;
+        position: fixed;
+        width: 100%;
+        height: 90px;
     }
-    
+    a{
+        color: #111;
+        font-weight: bold;
+        font-size: 2rem;
+    }
     
     ul{
         list-style-type: none;
         display: flex;
         margin-bottom: 0;
         padding-left: 0;
+        padding-right: 2rem;
     }
 
     li{
         padding-left: 2rem;
     }
 
-    #nav {
-        opacity: 0;
-    }
+    /**************** 以下、ハンバーガーボタンのスタイリング ****************/
+.btn {
+	/* ボタンの配置位置  */
+	position: fixed;
+	top: 32px;
+	right: 16px;
+	/* 最前面に */
+	z-index: 10;
+	/* ボタンの大きさ  */
+	width: 48px;
+	height: 48px;
+}
+/***** 真ん中のバーガー線 *****/
+.btn-line {
+	display: block;
+	/* バーガー線の位置基準として設定 */
+	position: relative;
+	/* 線の長さと高さ */
+	width: 100%;
+	height: 4px;
+	/* バーガー線の色 */
+	background-color: #d6d5d5;
+	transition: .2s;
+}
+/***** 上下のバーガー線 *****/
+.btn-line::before , .btn-line::after {
+	content: "";
+	/* 基準線と同じ大きさと色 */
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #d6d5d5;
+	transition: .5s;
+}
+.btn-line::before {
+	/* 上の線の位置 */
+	transform: translate(-11px,-16px);
+}
+.btn-line::after {
+	/* 下の線の位置 */
+	transform: translate(-11px,16px);
+}
+/***** メニューオープン時 *****/
+.btn-line.open {
+	/* 真ん中の線を透明に */
+	background-color: transparent;
+}
+.btn-line.open::before , .btn-line.open::after {
+	content: "";
+	background-color: #333;
+	transition: .2s;
+}
+.btn-line.open::before {
+	/* 上の線を傾ける */
+	transform: rotate(45deg);
+}
+.btn-line.open::after {
+	/* 上の線を傾ける */
+	transform: rotate(-45deg);
+}
+/**************** ここまで、ハンバーガーボタンのスタイリング ****************/
+/**************** 以下、メニューのスタイリング ****************/
+.right-nav {
+	/* メニューを縦に */
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	/* メニューの位置マイナス指定で画面外に */
+	right: -70%;
+	width: 70%;
+	height: 100vh;
+	color: #efefef;
+	transition: .3s;
+}
+.nav-list {
+	/* メニューテキスト位置をリスト内中心に */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+}
+.menu-list:hover {
+	background-color: rgba(255, 255, 255, .5);
+	color: #333;
+	cursor: pointer;
+	transition: .3s;
+}
+/***** メニューオープン時位置0にして画面内に *****/
+.right-nav.open {
+	position: absolute;
+	right: 0;
+}
+/* 600px以上はハンバーガーボタン非表示、ヘッダー固定 */
+@media screen and (min-width: 600px) {
+	.btn {
+		display: none;
+	}
+	.right-nav {
+		/* メニューを横に */
+		display: flex;
+		flex-direction: row;
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100px;
+	}
+}
+/**************** ここまで、メニューのスタイリング ****************/
 
-    #nav.invert{
-        opacity: 1;
-    }
-
-    .navbar{
-        margin-bottom: 0;
-    }
-    .wrap{
-        display: flex;
-        justify-content: space-between;
-    }
-
-
-
-
-
-
-
-
-    
 }
 

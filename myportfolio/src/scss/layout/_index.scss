@@ -1,34 +1,109 @@
+body{
+    overflow-x: hidden;
+    padding-top: 90px;
+}
 h2{
     text-align: center;
     margin-bottom: 5rem;
 }
 
-
-
-
-.main{
-    margin-top: 50px;
+p{
+    text-align: center;
 }
 
-#top-vg{
-    background-image: url('./../img/whale_13_sunameri.png');
-    background: no-repeat;
+.pagination{
+    display: flex;
+    text-align: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+ }
+ .nav-links{
+    display:flex;
+ }
+ .pagination .page-numbers{
+    display:inline-block;
+    margin-right:20px;
+    padding:20px 25px;
+    color:#333;
+    border-radius:3px;
+    box-shadow:0 3px 3px #999;
+    background:#fff;
+ }
+ .pagination .current{
+    padding:20px 25px;
+    background:#69a4db;
+    color:#fff;
+ }
+ .pagination .prev,
+ .pagination .next{
+    background:transparent;
+    box-shadow:none;
+    color:#69a4db;
+ }
+ .pagination .dots{
+    background:transparent;
+    box-shadow:none;
+ }
+
+// フェードイン
+.fade-in {
+    //opacity: 0;
+    visibility: hidden;
+    transform: translateY(50px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.fade-in.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
+
+.top-vg::before{
+    background-image: url('./../img/sen-lee-O4wSfAXQ_h4-unsplash.jpg');
     background-size: cover;
-    width: 100vw;
-    height: calc(60vh + 80px);
+    background-position: center center;
     position: fixed;
-    z-index: -100;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 75vh;
+    content: "";
 }
 
 .title{
-    padding: 30vh 0;
-    width: 100vw;
-    background: lightgreen;
-    h1{
-        max-width: 1500px;
-        margin: 0 auto;
-        text-align: center;
+    display: flex;
+    height: 75vh;
+    background: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    justify-content: center;
+    align-items: center;
+
+    .title-inner{
+        width: 100%;
+        height: fit-content;
+        align-items: center;
+        padding: 0 16px;
+        h2{
+            display: block;
+            max-width: 1500px;
+            margin: 0 auto;
+            font-size: 6rem;
+            font-weight: bold; 
+        }
+        p{
+            font-size: 4rem;
+            font-weight: bold;
+        }  
     }
+    //z-index: -100;
+}
+
+.main-inner{
+    background-color: white;
 }
 
 .message{
@@ -38,33 +113,96 @@ h2{
 
 article.service{
     margin: 0 10rem;
-    
-    img{
-        width: 10em;
+    i{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 1rem;
     }
 
     .service-contents{
         display: flex;
-        justify-content: space-between;
-        margin-bottom: 200px;
-        margin-left: auto;
-        margin-right: auto;
+        margin-bottom: 100px;
+        margin-left: 50px;
+        margin-right: 50px;
+        justify-content: center;
+        flex-wrap: wrap;
+        .service-content{
+            margin: 3rem 10rem;
+            max-width: 200px;
+        }
+        @media (min-width:780px){
+            .service-content{
+                width: calc(100% / 3);
+            }
+        }
+        @media (max-width:779px) and (min-width:601px){
+            .service-content{
+                width: calc(100% / 2);
+            }
+        }
+        @media (max-width:600px){
+            .service-content{
+                width: 100%;
+            }
+        }
     }
 
 }
 
 article.works{
+    h2{
+        margin: 0 auto;
+    }
     img{
-        width: 25rem;
+        margin: 30px auto;
+        max-width: 250px;
     }
     .top,
     .bottom{
         display: flex;
-        justify-content: space-between;
-        margin-bottom: 30px;
+        flex-wrap: wrap;
+        margin: 20px 30px;
+    }
+    @media (min-width: 780px){
+        img{
+            width: calc(100% / 4);
+        }
+    }
+    @media (max-width: 779px){
+        img{
+            width: calc(100% / 2);
+        }
     }
 }
 
 article.contact{
-    text-align: center;
+    height: 30vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-color: unset;
+}
+
+article.contact::before{
+    background-image: url('./../img/photo-1646540706780-a996883e7254.jpg');
+    background-size: cover;
+    background-position: center center;
+    height: 30vh;
+    width: 100vw;
+    z-index: -1;
+    content: "";   
+}
+
+.contact-inner{
+    display: flex;
+    background-size: cover;
+    background-position: center center;
+    background: no-repeat;
+    height: 30vh;
+    width: 100vw;
+    align-items: center;
+    p{
+        font-size: 4rem;
+    }
 }
