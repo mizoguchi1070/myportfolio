@@ -44,11 +44,11 @@
 			<nav id="nav">
 				<ul class="right-nav">
 					<li class="nav-list"><a href="<?php echo get_home_url() ?>">HOME</a></li>
-					<li class="nav-list"><a href="<?php get_site_url() ?>/wp/works">WORKS</a></li>
-					<li class="nav-list"><a href="<?php get_site_url() ?>/wp/about">ABOUT</a></li>
+					<li class="nav-list"><a href="<?php echo get_site_url() ?>/wp/works">WORKS</a></li>
+					<li class="nav-list"><a href="<?php echo get_site_url() ?>/wp/about">ABOUT</a></li>
 					<li class="nav-list"><a href="#">SKILL</a></li>
-					<li class="nav-list"><a href="<?php get_home_url() ?>/wp/#service">SERVICE</a></li>
-					<li class="nav-list"><a href="<?php get_site_url() ?>/wp/contact">CONTACT</a></li>
+					<li class="nav-list"><a href="<?php echo get_home_url() ?>/wp/#service">SERVICE</a></li>
+					<li class="nav-list"><a href="<?php echo get_site_url() ?>/wp/contact">CONTACT</a></li>
 				</ul>
 			</nav>
 
