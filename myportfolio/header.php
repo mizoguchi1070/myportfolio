@@ -14,6 +14,18 @@
 	<script src="https://kit.fontawesome.com/f52672158f.js" crossorigin="anonymous"></script>
 	<!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
 	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-222701322-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-222701322-1');
+	</script>
 	<?php wp_enqueue_script('jquery'); ?>
 	<?php wp_enqueue_script('bootstrap-js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array('jquery')); ?>
 	<?php wp_head(); ?>
