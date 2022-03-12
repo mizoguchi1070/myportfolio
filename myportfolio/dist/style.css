@@ -420,7 +420,7 @@ header {
   /**************** ここまで、ハンバーガーボタンのスタイリング ****************/
   /**************** 以下、メニューのスタイリング ****************/
   /***** メニューオープン時位置0にして画面内に *****/
-  /* 600px以上はハンバーガーボタン非表示、ヘッダー固定 */
+  /* 830px以上はハンバーガーボタン非表示、ヘッダー固定 */
   /**************** ここまで、メニューのスタイリング ****************/
 }
 header .navigation {
@@ -535,7 +535,7 @@ header .right-nav.open {
   position: absolute;
   right: 0;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 830px) {
   header .btn {
     display: none;
   }
@@ -546,8 +546,8 @@ header .right-nav.open {
     position: fixed;
     top: 0;
     right: 0;
-    width: 100%;
-    height: 100px;
+    width: 650%;
+    height: 90px;
   }
 }
 

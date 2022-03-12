@@ -129,8 +129,8 @@ header {
 	position: absolute;
 	right: 0;
 }
-/* 600px以上はハンバーガーボタン非表示、ヘッダー固定 */
-@media screen and (min-width: 600px) {
+/* 830px以上はハンバーガーボタン非表示、ヘッダー固定 */
+@media screen and (min-width: 830px) {
 	.btn {
 		display: none;
 	}
@@ -141,8 +141,8 @@ header {
 		position: fixed;
 		top: 0;
 		right: 0;
-		width: 100%;
-		height: 100px;
+		width: 650%;
+		height: 90px;
 	}
 }
 /**************** ここまで、メニューのスタイリング ****************/
