@@ -1,7 +1,7 @@
     <?php get_header(); ?>
 
     <?php
-    $post = get_page_by_path('スラッグ', OBJECT, 'works');
+    $post = get_page_by_path('works', OBJECT, 'works');
     $postID = $post->ID;
     ?>
 
@@ -13,6 +13,7 @@
         <div class="page-works">
             <main class="works-archive">
                 <div class="works-archive-contents">
+
                     <?php if (have_posts()) : ?>
                         <?php while (have_posts()) : the_post();
 
@@ -28,7 +29,7 @@
                                         <h2 class="works-item__title"><?php the_title(); ?></h2>
                                         <time datetime="the_time( 'Y-m-d' )"><?php the_time('Y.m.d'); ?></time>
                                         <p class="works-item__text"><?php print mb_strimwidth(strip_tags(get_the_content()), 0, 200, "…", "UTF-8"); ?></p>
-                                        <p class="works-item_category"><?php the_category(); ?></p> 
+                                         
                                     </div>
                                 </a>
                             </article>
@@ -38,7 +39,6 @@
                     <?php else : ?>
                         何も投稿がありません。
                     <?php endif; ?>
-
                 </div>
 
                 <?php
